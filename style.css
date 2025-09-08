@@ -11,7 +11,7 @@ body {
 header {
   background: #0d47a1;
   color: #fff;
-  padding: 15px 20px;
+  padding: 25px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -35,7 +35,7 @@ nav ul li a:hover { text-decoration: underline; }
 
 /* Hero Section */
 .hero {
-  background: url('https://picsum.photos/id/1011/1600/600') center/cover no-repeat;
+  background: url('Car_banner.jpg') center/cover no-repeat;
   height: 70vh;
   display: flex;
   justify-content: center;
@@ -87,9 +87,12 @@ nav ul li a:hover { text-decoration: underline; }
 .service:hover { transform: translateY(-5px); }
 .service img {
   width: 100%;
+  height: 200px;         /* fixed height */
+  object-fit: cover;     /* crops the image neatly */
   border-radius: 10px;
   margin-bottom: 10px;
 }
+
 
 /* About */
 .about {
