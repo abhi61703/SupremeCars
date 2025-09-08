@@ -102,6 +102,51 @@ nav ul li a:hover { text-decoration: underline; }
 }
 .about h2 { margin-bottom: 20px; font-size: 1.8rem; }
 
+#partners {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f5f5f5;
+}
+
+#partners h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.partner-carousel {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.partner-track {
+  display: flex;
+  gap: 40px;
+  flex-wrap: nowrap;          /* keep all logos in a single row */
+  animation: scroll 25s linear infinite;
+}
+
+.partner-track img {
+  flex: 0 0 auto;             /* prevent shrinking */
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Smooth infinite scroll */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* move half the width of the track */
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+  .partner-track img { width: 70px; }
+  #partners h2 { font-size: 1.5rem; }
+}
+
+
+
 /* Reviews */
 .reviews {
   padding: 60px 20px;
